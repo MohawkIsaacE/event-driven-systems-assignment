@@ -24,6 +24,7 @@ public class LevelManager : MonoBehaviour
     {
         // Connect inventory and ui events
         inventoryManager.OnInventoryChanged.AddListener(uiManager.UpdateInventoryUI);
+        //inventoryManager.OnInventoryChanged.AddListener();
 
         foreach(Transform child in inventoryItems.transform)
         {
@@ -40,10 +41,23 @@ public class LevelManager : MonoBehaviour
 
         toggle1.OnToggle.AddListener(wallEye.OpenClose);
 
-        wallEye.OnEyeStateChanged.AddListener(lockDoor);
+        wallEye.OnEyeStateChanged.AddListener(LockDoorWallEye);
     }
 
-    void lockDoor(WallEyeState eyeState)
+    // "Buffer" the event with a function that has the correct arguments
+    void LockDoorWallEye(WallEyeState eyeState)
+    {
+        LockDoor(eyeState, false);
+    }
+    void LockDoorInventory(WallEyeState eyeState)
+    {
+        if (inventoryManager.inventory[InventoryItem.Lantern] > 0)
+        {
+            LockDoor(WallEyeState.Closed, true);
+        }
+    }
+
+    void LockDoor(WallEyeState eyeState, bool inventoryPickedUp)
     {
         if (eyeState == WallEyeState.Defeated)
         {
