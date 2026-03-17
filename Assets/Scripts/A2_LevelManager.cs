@@ -31,7 +31,7 @@ public class A2_LevelManager : MonoBehaviour
         foreach (Transform door in ColouredDoors.transform)
         {
             A2_ColouredDoor colouredDoor = door.GetComponent<A2_ColouredDoor>();
-
+            colourManager.OnColourChanged.AddListener(colouredDoor.ChangeTransparency);
         }
     }
 }

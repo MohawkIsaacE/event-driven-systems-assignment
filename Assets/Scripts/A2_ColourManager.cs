@@ -17,7 +17,41 @@ public class A2_ColourManager : MonoBehaviour
 
     public void ColourChanged(Colour newColour)
     {
-        player.PlayerColour = newColour;
+        // Player colour changing logic
+        // Only check which colour combination if the new colour is different than the player's current colour,
+        // and if the player or the new colour are not the default colourless
+        if (player.PlayerColour != Colour.None && newColour != Colour.None && player.PlayerColour != newColour )
+        {
+            // Brown colour change
+            if (player.PlayerColour == Colour.Green  ||
+                player.PlayerColour == Colour.Orange ||
+                player.PlayerColour == Colour.Purple ||
+                player.PlayerColour == Colour.Brown)
+            {
+                player.PlayerColour = Colour.Brown;
+            }
+            // Combining other colours
+            // R + Y = O
+            // R + B = P
+            // B + Y = G
+            else if (player.PlayerColour == Colour.Red && newColour == Colour.Yellow)
+            {
+                player.PlayerColour = Colour.Orange;
+            }
+            else if (player.PlayerColour == Colour.Red && newColour == Colour.Blue)
+            {
+                player.PlayerColour = Colour.Purple;
+            }
+            else if (player.PlayerColour == Colour.Blue && newColour == Colour.Yellow)
+            {
+                player.PlayerColour = Colour.Green;
+            }
+        }
+        else
+        {
+            player.PlayerColour = newColour;
+        }
+
         OnColourChanged.Invoke();
     }
 }
