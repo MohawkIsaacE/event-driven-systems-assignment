@@ -30,6 +30,9 @@ public class Character : MonoBehaviour
     bool startRockSpawn = false;
     float rockTimer = 0.0f;
 
+    // A2 additions
+    public Colour PlayerColour;
+
     void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -44,6 +47,7 @@ public class Character : MonoBehaviour
     private void Start()
     {
         UpdateWeapon();
+        PlayerColour = Colour.None;
     }
 
     private void Update()
