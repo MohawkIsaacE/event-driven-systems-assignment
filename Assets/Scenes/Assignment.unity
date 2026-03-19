@@ -791,6 +791,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2120121223}
     m_Modifications:
+    - target: {fileID: 98118278122310123, guid: 30c64c46677e1f14782dbad134f4173d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 343530334}
     - target: {fileID: 606060201883668375, guid: 30c64c46677e1f14782dbad134f4173d, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.15892
@@ -1209,6 +1213,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4928519386344608465, guid: 3fd1002f5b5c06d49bedd9d0315b13c2, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 343530334}
     - target: {fileID: 5574994265633025361, guid: 3fd1002f5b5c06d49bedd9d0315b13c2, type: 3}
       propertyPath: m_Name
       value: YellowDoor
@@ -1231,6 +1239,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2120121223}
     m_Modifications:
+    - target: {fileID: 6868373502946286000, guid: 6e11b2569ef276f4bae3b8c57e10db20, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 343530334}
     - target: {fileID: 7479758698377896605, guid: 6e11b2569ef276f4bae3b8c57e10db20, type: 3}
       propertyPath: m_Name
       value: GreenDoor
@@ -2416,6 +2428,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BrownDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 2749890657573484916, guid: 51bd04b25e0ae4c4f9169bb1fa387ddd, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 343530334}
     - target: {fileID: 8555620427894677473, guid: 51bd04b25e0ae4c4f9169bb1fa387ddd, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.9168
@@ -2853,6 +2869,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1118601878752490103, guid: e1afa9b0dff6e4747b12fd3d871c18d6, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 343530334}
     - target: {fileID: 6156335050117945853, guid: e1afa9b0dff6e4747b12fd3d871c18d6, type: 3}
       propertyPath: m_Name
       value: OrangeDoor

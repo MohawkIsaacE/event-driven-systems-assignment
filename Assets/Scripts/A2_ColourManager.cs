@@ -34,15 +34,19 @@ public class A2_ColourManager : MonoBehaviour
             // R + Y = O
             // R + B = P
             // B + Y = G
-            else if (player.PlayerColour == Colour.Red && newColour == Colour.Yellow)
+            // Double calculations for if colours are reversed
+            else if (player.PlayerColour == Colour.Red && newColour == Colour.Yellow ||
+                     player.PlayerColour == Colour.Yellow && newColour == Colour.Red)
             {
                 player.PlayerColour = Colour.Orange;
             }
-            else if (player.PlayerColour == Colour.Red && newColour == Colour.Blue)
+            else if (player.PlayerColour == Colour.Red && newColour == Colour.Blue ||
+                     player.PlayerColour == Colour.Blue && newColour == Colour.Red)
             {
                 player.PlayerColour = Colour.Purple;
             }
-            else if (player.PlayerColour == Colour.Blue && newColour == Colour.Yellow)
+            else if (player.PlayerColour == Colour.Blue && newColour == Colour.Yellow ||
+                     player.PlayerColour == Colour.Yellow && newColour == Colour.Blue)
             {
                 player.PlayerColour = Colour.Green;
             }
